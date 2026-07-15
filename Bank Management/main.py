@@ -17,10 +17,19 @@ class Bank:
     except Exception as err:
         print(f"an exception occured as {err}")
 
-    @staticmethod
-    def update() :
-        with open("data.json" , "w") as fs:
+    @classmethod
+    def __update(cls) :
+        with open(cls.database , 'w') as fs:
             fs.write(json.dumps(Bank.data))    
+
+    @classmethod
+    def __accountgenerate(cls) :
+        alpha = random.choices(string.ascii_letters, k=3)
+        num = random.choices(string.digits, k=3)
+        spchar = random.choices("!@#$%^&*" , k =1)
+        id = alpha + num + spchar 
+        random.shuffle(id) 
+        return "".join(id)      
 
 
     def Createaccount(self):
@@ -29,7 +38,7 @@ class Bank:
             "age"  : int(input("Tell your age - ")),
             "email" : input("tell your email - "),
             "pin" : int(input("tell your pin -")),
-            "account" : 1234,
+            "accountNo." : Bank.__accountgenerate() ,
             "balance" : 0
         } 
         
@@ -43,7 +52,7 @@ class Bank:
 
             Bank.data.append(info)
 
-            Bank.update()    
+            Bank.__update()    
 
 
 
