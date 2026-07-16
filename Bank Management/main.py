@@ -69,7 +69,6 @@ class Bank:
                print("sorry the amount is too muc, you can deposit below 10000")
              
             else: 
-               print(userdata)
                userdata[0]['balance'] += amount
                Bank.__update()
                print("amount deposited successfully")
@@ -89,7 +88,6 @@ class Bank:
                 print("sorry you have not this much money")
              
             else: 
-               print(userdata)
                userdata[0]['balance'] -= amount
                Bank.__update()
                print("Amount withdrew successfully")
