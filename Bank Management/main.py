@@ -54,6 +54,26 @@ class Bank:
 
             Bank.__update()    
 
+    def depositmoney(self):
+       accnumber =  input("tell your account number")
+       pin = int(input("please tell your pin as well"))
+
+       userdata = [i for i in Bank.data if i['accountNo.'] == accnumber and i['pin'] == pin]
+
+       if userdata == False:
+          print("Sorry no data found")
+
+       else:
+            amount = int (input("How much money you want to deposit?"))
+            if amount > 10000 or  amount< 0:
+               print("sorry the amount is too muc, you can deposit below 10000")
+             
+            else: 
+               print(userdata)
+               userdata[0]['balance'] += amount
+               Bank.__update()
+               print("amount deposited successfully")
+
 
 
 user = Bank()
@@ -70,3 +90,6 @@ check = int(input("tell your response -:"))
 
 if check == 1:
     user.Createaccount()
+
+if check == 2:
+    user.depositmoney()    
