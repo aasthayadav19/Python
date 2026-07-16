@@ -156,7 +156,7 @@ class Bank:
             print("sorry no such exist ")  
         else:
             check = input("press y if you actually want to delete or press n ")
-            if check == 'n' or click == 'N':
+            if check == 'n' or check == 'N':
                 print("bypassed")
             else:
                 index = Bank.data.index(userdata[0])   
