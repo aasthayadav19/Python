@@ -118,9 +118,9 @@ class Bank:
            print("Fill the details for change or leave it empty if no change")
             
            newdata = {
-               "name": input("please tell new name or press enter: "),
-               "email": input("tell your new Email or press enter to skip"),
-               "pin" : input("enter your new pin or press enter to skip:")
+               "name": input(" Tell new name or press enter: "),
+               "email": input("Tell your new Email or press enter to skip"),
+               "pin" : input("Enter your new pin or press enter to skip:")
            } 
 
            if newdata["name"] == "":
@@ -153,9 +153,9 @@ class Bank:
         userdata = [i for i in Bank.data if i['accountNo.'] == accnumber and i['pin'] == pin]
 
         if userdata == False:
-            print("sorry no such exist ")  
+            print("Sorry, no such exist ")  
         else:
-            check = input("press y if you actually want to delete or press n ")
+            check = input("Press y if you actually want to delete or press n ")
             if check == 'n' or check == 'N':
                 print("bypassed")
             else:
