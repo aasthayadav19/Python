@@ -104,16 +104,16 @@ class Bank:
           print(f"{i} : {userdata[0][i]}") 
 
     def updatedetails(self):
-       accnumber =  input("tell your account number")
-       pin = int(input("please tell your pin as well"))
+       accnumber =  input("Tell your account number")
+       pin = int(input("Tell your pin as well"))
 
        userdata = [i for i in Bank.data if i['accountNo.'] == accnumber and i['pin'] == pin]       
 
        if userdata == False:
-           print("no such user found")
+           print("No such user found")
 
        else:
-           print("you cannot change the age, account number, balance")    
+           print("You cannot change the age, account number, balance")    
            
            print("Fill the details for change or leave it empty if no change")
             
