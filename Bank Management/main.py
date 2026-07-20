@@ -174,7 +174,7 @@ print("press 4 for details")
 print("press 5 for updating the details")
 print("press 6 for deleting your account")
 
-check = int(input("tell your response -:"))
+check = int(input("Tell your response -:"))
 
 if check == 1:
     user.Createaccount()
