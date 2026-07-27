@@ -94,7 +94,7 @@ class Bank:
 
     def showdetails(self):
        accnumber =  input("tell your account number")
-       pin = int(input("please tell your pin as well"))
+       pin = int(input("Please tell your pin as well"))
 
        userdata = [i for i in Bank.data if i['accountNo.'] == accnumber and i['pin'] == pin]
        
