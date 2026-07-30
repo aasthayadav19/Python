@@ -167,12 +167,12 @@ user = Bank()
 
 
 
-print("press 1 for creating a new account")
-print("press 2 for Depositing the money in the bank")
-print("press 3 for withdrawing the money from the bank")
-print("press 4 for details")
-print("press 5 for updating the details")
-print("press 6 for deleting your account")
+print("Press 1 for creating a new account")
+print("Press 2 for Depositing the money in the bank")
+print("Press 3 for withdrawing the money from the bank")
+print("Press 4 for details")
+print("Press 5 for updating the details")
+print("Press 6 for deleting your account")
 
 check = int(input("Tell your response -:"))
 
